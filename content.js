@@ -1,6 +1,3 @@
-console.log("Script has been loaded");
-browser.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  if (request.command === 'toggleSpeed') {
     var video = document.querySelector('video');
     if (video) {
       if (video.playbackRate === 2) {
@@ -8,6 +5,4 @@ browser.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       } else {
         video.playbackRate = 2;
       }
-    }
-  }
-});
+    };
