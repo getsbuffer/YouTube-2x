@@ -1,5 +1,5 @@
 console.log("Script has been loaded");
-broswer.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+browser.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.command === 'toggleSpeed') {
     var video = document.querySelector('video');
     if (video) {
