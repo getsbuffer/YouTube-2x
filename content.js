@@ -1,8 +1,12 @@
-    var video = document.querySelector('video');
-    if (video) {
-      if (video.playbackRate === 2) {
-        video.playbackRate = 1;
-      } else {
-        video.playbackRate = 2;
-      }
-    };
+function setPlaybackRate() {
+  var video = document.querySelector('video');
+  if (video) {
+    video.addEventListener('loadedmetadata', function() {
+      video.playbackRate = 2;
+    });
+  } 
+  else {
+    setTimeout(setPlaybackRate(rate), 1000);
+  }
+}
+setPlaybackRate();

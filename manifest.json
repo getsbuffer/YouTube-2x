@@ -3,7 +3,7 @@
   "name": "YouTube 2x Speed",
   "version": "1.0",
   "description": "Automatically sets YouTube videos at 2x",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "https://www.youtube.com/*"],
   "browser_action": {
     "default_icon": {
       "48": "icon.png"
